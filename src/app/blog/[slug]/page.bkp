@@ -1,0 +1,56 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+
+// Mock posts data
+const posts = [
+    {
+        slug: "future-of-cybersecurity",
+        title: "The Future of Cybersecurity: Emerging Trends",
+        content: "Explore the new trends in cybersecurity and how businesses can stay secure in a rapidly changing digital world.",
+        date: "January 10, 2025",
+    },
+    {
+        slug: "ai-in-business",
+        title: "How AI is Shaping the Future of Business",
+        content: "Artificial intelligence is revolutionizing industries. Discover the impact of AI on business strategies and operations.",
+        date: "January 5, 2025",
+    },
+];
+
+function BlogPostPage({ params }) {
+    const [post, setPost] = useState(null);
+
+    // Unwrapping params using React's `use()`
+    const { slug } = React.use(params);
+
+    useEffect(() => {
+        const foundPost = posts.find((post) => post.slug === slug);
+        setPost(foundPost);
+    }, [slug]);
+
+    if (!post) {
+        return (
+            <div className="py-20 text-center text-white">
+                <h1 className="text-2xl font-bold">Post not found!</h1>
+            </div>
+        );
+    }
+
+    return (
+        <section className="py-20 bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white">
+            <div className="max-w-screen-xl mx-auto px-6">
+                <div className="text-center mb-12">
+                    <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+                    <p className="text-lg text-gray-300">{post.date}</p>
+                </div>
+                <div className="bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div className="p-6">
+                        <p className="text-gray-300 mt-4">{post.content}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+export default BlogPostPage;

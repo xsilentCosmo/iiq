@@ -1,0 +1,194 @@
+'use client'
+import React from 'react';
+import { motion } from 'framer-motion';
+
+function Services() {
+  const services = [
+    {
+      title: "Research and Development",
+      description: "Pioneering research and development for innovative solutions.",
+    },
+    {
+      title: "Development",
+      description: "Expertise in web and software development to meet your needs.",
+    },
+    {
+      title: "Automation",
+      description:
+        "Delivering automation solutions, electronics development, and services.",
+    },
+    {
+      title: "Advertising",
+      description: "Creative advertisement and marketing strategies for growth.",
+    },
+    {
+      title: "Sales",
+      description: "Comprehensive product sales and marketing services to boost revenue.",
+    },
+    {
+      title: "Infrastructure",
+      description: "Premium infrastructure, co-working spaces, and office solutions.",
+    },
+    {
+      title: "Franchisee",
+      description: "Franchise services to expand your firm's reach and network.",
+    },
+    {
+      title: "Marketing",
+      description: "Cutting-edge marketing and digital services to transform your brand.",
+    },
+    {
+      title: "Project Management",
+      description:
+        "Reliable project management services to ensure seamless execution.",
+    },
+    {
+      title: "Quality Management",
+      description: "Professional quality management solutions for excellence.",
+    },
+    {
+      title: "Consultancy",
+      description: "Tailored consultancy services to guide your business decisions.",
+    },
+    {
+      title: "Finance",
+      description: "Comprehensive financial solutions for sustainable growth.",
+    },
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white">
+      <div className="max-w-screen-xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-white mb-12">
+          Our <span className="text-[#91e0ed]">Services</span>
+        </h2>
+        <div className="relative">
+          {/* Vertical Line */}
+          <motion.div
+            className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-[#91e0ed]"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+           /*  viewport={{ once: true }} */
+          ></motion.div>
+
+          {/* Split Services */}
+          <div className="grid grid-cols-1 md:ml-7 md:grid-cols-2 gap-12 md:gap-20">
+            {/* Left Side Services */}
+            <div className="flex flex-col gap-12">
+              {services.slice(0, 6).map((service, i) => (
+                <motion.div
+                  key={i}
+                  className="flex items-center text-sm md:gap-6"
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  initial={{ opacity: 0, x: -50 }}
+                  viewport={{ once: true, amount: 0.5 }} 
+                  transition={{ delay: 0.05 * i, duration: 0.6 }} 
+                >
+                  {/* Connector Circle */}
+                  <motion.div
+                    className="flex-shrink-0 w-10 h-10 bg-[#91e0ed] rounded-full flex items-center justify-center text-[#1b2a36] font-bold text-lg"
+                    whileInView={{
+                      opacity: 1,
+                      scale: 1,
+                    }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    transition={{ delay: 0.05 * i, duration: 0.6 }} 
+                  >
+                    {i + 1}
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="text-left max-w-md">
+                    <motion.h3
+                      className="text-lg font-semibold mb-2 text-[#91e0ed]"
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      initial={{ opacity: 0, y: -20 }}
+                      transition={{ delay: 0.1 * i, duration: 0.6 }} 
+                    >
+                      {service.title}
+                    </motion.h3>
+                    <motion.p
+                      className="text-gray-300"
+                      whileInView={{
+                        opacity: 1,
+                      }}
+                      initial={{ opacity: 0 }}
+                      transition={{ delay: 0.15 * i, duration: 0.6 }} 
+                    >
+                      {service.description}
+                    </motion.p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Right Side Services */}
+            <div className="flex flex-col gap-12">
+              {services.slice(6).map((service, i) => (
+                <motion.div
+                  key={i + 6}
+                  className="flex items-center md:gap-6"
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  initial={{ opacity: 0, x: 50 }}
+                  viewport={{ once: true, amount: 0.5 }} 
+                  transition={{ delay: 0.05 * i + 0.6, duration: 0.6 }}
+                >
+                  {/* Connector Circle */}
+                  <motion.div
+                    className="flex-shrink-0 w-10 h-10 bg-[#91e0ed] rounded-full flex items-center justify-center text-[#1b2a36] font-bold text-lg"
+                    whileInView={{
+                      opacity: 1,
+                      scale: 1,
+                    }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    transition={{ delay: 0.05 * i + 0.6, duration: 0.6 }}
+                  >
+                    {i + 7}
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="text-left max-w-md">
+                    <motion.h3
+                      className="text-lg font-semibold mb-2 text-[#91e0ed]"
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      initial={{ opacity: 0, y: -20 }}
+                      transition={{ delay: 0.1 * i + 0.6, duration: 0.6 }} 
+                    >
+                      {service.title}
+                    </motion.h3>
+                    <motion.p
+                      className="text-gray-300 text-sm"
+                      whileInView={{
+                        opacity: 1,
+                      }}
+                      initial={{ opacity: 0 }}
+                      transition={{ delay: 0.15 * i + 0.6, duration: 0.6 }} 
+                    >
+                      {service.description}
+                    </motion.p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Services;
+
