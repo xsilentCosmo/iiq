@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function WhatWeOffer() {
   return (
-    <section className="py-16 bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white">
+    <section className="py-16 bg-gradient-to-tr from-[#1b2a36] to-[#00375e] text-white">
       <div className="max-w-screen-xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ scale: 0 }}

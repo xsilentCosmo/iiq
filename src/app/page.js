@@ -19,9 +19,9 @@ export default function Home() {
       <Hero />
       <WhyChooseUs />
       <Portfolio/>
+      <WhatWeOffer />
       <VisionMission />
       <ServicesSection/>
-      <WhatWeOffer />
       <ConsultingServices />
       <CTASection />
       <Gallery/>
