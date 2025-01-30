@@ -1,7 +1,7 @@
 function Gallery() {
     return (
-        <section className="pt-20 bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white">
-            <div className="max-w-screen-xl mx-auto px-0">
+        <section className="pt-20 bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white bg-green-500">
+            <div className="max-w-screen mx-auto px-0">
                 {/* Section Heading */}
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-semibold text-white mb-4">Our Work in Focus</h2>

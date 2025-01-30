@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +17,7 @@
 
 body {
   background: linear-gradient(360deg, #1b2a36,#00375e  70%); 
-
+  overflow-x: hidden;
   min-height: 100vh;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
