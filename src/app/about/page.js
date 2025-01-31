@@ -55,7 +55,7 @@ function AboutUs() {
       <section
         className="bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white pb-20">
         {/* About Section Header */}
-        <div className="text-center mb-20 py-28 rounded-md bg-fixed bg-cover bg-[url('https://png.pngtree.com/background/20230417/original/pngtree-business-office-blue-technology-light-background-picture-image_2446614.jpg')] -gradient-to-br from-[#1b2a36] to-[#00375e]">
+        <div className="text-center mb-20 py-28 rounded-md bg-fixed bg-cover bg-[url('https://png.pngtree.com/background/20230417/original/pngtree-business-office-blue-technology-light-background-picture-image_2446614.jpg')]">
           <motion.h2
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
