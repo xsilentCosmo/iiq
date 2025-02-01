@@ -3,20 +3,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { FiCode, FiTrendingUp, FiSettings, FiMonitor, FiShoppingCart, FiLayers, FiBriefcase, FiTarget, FiClipboard, FiCheckCircle, FiUserCheck, FiDollarSign } from 'react-icons/fi';
 
 const services = [
-    { id: "research-development", company: "QuibitQ Labs", title: "Research & Development", description: "Innovative research solutions.", logo: "/image/logos/quibitq.png" },
-    { id: "development", company: "Quantum Quotient", title: "Development", description: "Expert software solutions.", logo: "/images/logos/quantquotient.png" },
-    { id: "automation", company: "IIQ Digital", title: "Automation", description: "AI-driven automation services.", logo: "/images/logos/iiq_digital.png" },
-    { id: "advertising", company: "Pavan Media Tech", title: "Advertising", description: "Creative marketing strategies.", logo: "/images/logos/pavan_media.png" },
-    { id: "sales", company: "SalesBoost", title: "Sales", description: "Revenue-boosting sales solutions.", logo: "/logos/salesboost.png" },
-    { id: "infrastructure", company: "IIQ Space", title: "Infrastructure", description: "Premium co-working spaces.", logo: "/images/logos/iiqspace.png" },
-    { id: "franchise", company: "FranchisePro", title: "Franchise", description: "Expand your brand with us.", logo: "/logos/franchisepro.png" },
-    { id: "marketing", company: "Quantum Leads", title: "Marketing", description: "Data-driven brand transformation.", logo: "/logos/quantumleads.png" },
-    { id: "project-management", company: "Project Mate", title: "Project Management", description: "Efficient & reliable execution.", logo: "/logos/projectmate.png" },
-    { id: "quality-management", company: "QualiDezk", title: "Quality Management", description: "Ensuring excellence in quality.", logo: "/images/logos/qualidezk.png" },
-    { id: "consultancy", company: "PacketLab", title: "Consultancy", description: "Expert business advisory.", logo: "/logos/packetlab.png" },
-    { id: "finance", company: "FinGrowth", title: "Finance", description: "Smart financial strategies.", logo: "/logos/fingrowth.png" },
+    { id: "research-development", company: "QuibitQ Labs", title: "Research & Development", description: "Innovative research solutions.", icon: <FiTrendingUp /> },
+    { id: "development", company: "Quantum Quotient", title: "Development", description: "Expert software solutions.", icon: <FiCode /> },
+    { id: "automation", company: "IIQ Digital", title: "Automation", description: "AI-driven automation services.", icon: <FiSettings /> },
+    { id: "advertising", company: "Pavan Media Tech", title: "Advertising", description: "Creative marketing strategies.", icon: <FiMonitor /> },
+    { id: "sales", company: "SalesBoost", title: "Sales", description: "Revenue-boosting sales solutions.", icon: <FiShoppingCart /> },
+    { id: "infrastructure", company: "IIQ Space", title: "Infrastructure", description: "Premium co-working spaces.", icon: <FiLayers /> },
+    { id: "franchise", company: "FranchisePro", title: "Franchise", description: "Expand your brand with us.", icon: <FiBriefcase /> },
+    { id: "marketing", company: "Quantum Leads", title: "Marketing", description: "Data-driven brand transformation.", icon: <FiTarget /> },
+    { id: "project-management", company: "Project Mate", title: "Project Management", description: "Efficient & reliable execution.", icon: <FiClipboard /> },
+    { id: "quality-management", company: "QualiDezk", title: "Quality Management", description: "Ensuring excellence in quality.", icon: <FiCheckCircle /> },
+    { id: "consultancy", company: "PacketLab", title: "Consultancy", description: "Expert business advisory.", icon: <FiUserCheck /> },
+    { id: "finance", company: "FinGrowth", title: "Finance", description: "Smart financial strategies.", icon: <FiDollarSign /> },
 ];
 
 const Services = () => {
@@ -31,19 +32,18 @@ const Services = () => {
             <div className="py-24 max-w-screen-xl mx-auto px-6 text-center">
 
                 {/* Grid Layout */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
                     {services.map((service, i) => (
-                        <Link key={i} href={`/services/${service.id}`} className="cursor-pointer">
+                        <Link key={i} href={`/services/${service.id}`} className="cursor-pointer hover:-rotate-3 transition-all duration-200">
                             <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                whileHover={{ scale: 1.08 }}
-                                className="relative group p-6 rounded-xl shadow-lg bg-gradient-to-br from-[#1b2a36] to-[#00375e] border border-[#91e0ed]/40 hover:border-[#91e0ed] transition-all duration-300"
+                                initial={{ y: 50 }}
+                                whileInView={{ y: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="relative group p-6 py-10 rounded-xl shadow-lg bg-gradient-to-br from-[#1b2a36] to-[#00375e] border border-[#91e0ed]/40 hover:border-[#91e0ed] transition-all duration-300"
                             >
-                                {/* Floating Logo Container */}
-                                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md shadow-md group-hover:shadow-xl transition-all duration-300">
-                                    <img src={service.logo} alt={service.company} className="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 transition-all duration-300" />
+                                {/* Floating Icon (Instead of Logo) */}
+                                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md shadow-md group-hover:shadow-xl transition-all duration-300 text-[#91e0ed] text-3xl">
+                                    {service.icon}
                                 </div>
 
                                 {/* Content */}
@@ -56,9 +56,6 @@ const Services = () => {
                                 <p className="text-gray-300 text-sm mt-2 group-hover:text-gray-100 transition-all duration-300">
                                     {service.description}
                                 </p>
-
-                                {/* Floating Glow Effect */}
-                                <div className="absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 bg-[#91e0ed]/40 blur-md transition-all duration-500"></div>
                             </motion.div>
                         </Link>
                     ))}

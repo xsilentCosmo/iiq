@@ -116,24 +116,22 @@ const ScrollSection = () => {
   return (
     <div>
       <div className="cols2 flex justify-around pl-5 min-h-screen py-60 bg-gradient-to-tr from-[#1b2a36] to-[#00375e]">
-        {/* <h1 className="scroll-trigger flex-grow-0 self-start font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wider uppercase leading-none">
-          Services
-        </h1> */}
 
-        <h1 className="scroll-trigger flex-grow-0 self-start font-extrabold text-xl sm:text2xl md:text-3xl lg:text-4xl tracking-wide leading-none max-w-[30%] lg:max-w-[45%]">
-          <span className="text-[#91e0ed] text-1xl sm:text-2xl md:text-4xl text-5xl">Explore</span> our wide <br/>range of <span className="text-[#91e0ed] text-1xl sm:text-2xl md:text-4xl text-5xl">Services</span>
+        <h1 className="scroll-trigger flex-grow-0 self-start font-semibold md:font-extrabold text-xl sm:text2xl md:text-3xl lg:text-4xl tracking-wide leading-none max-w-[30%] lg:max-w-[45%]">
+          <span className="text-[#91e0ed] text-xl sm:text-2xl md:text-4xl lg:text-5xl">Explore</span> our wide <br/>range of <span className="text-[#91e0ed] sm:text-lg md:text-4xl lg:text-5xl">Services</span>
         </h1>
+
 
         <ul className="list-none pl-0 flex-grow-0 self-start font-extrabold text-xl tracking-wider leading-snug">
           {services.map((service, index) => (
             <li key={index} className="scroll-snap-align-center pl-[0.2em]">
               <div className="flex items-start py-16">
-                <span className="text-5xl mr-4">{service.logo}</span>
+                <span className="text-3xl md:text-5xl mr-4">{service.logo}</span>
                 <div className="flex flex-col max-w-sm">
-                  <span className="font-bold text-2xl mb-1">
+                  <span className="font-bold text-base md:text-2xl mb-1">
                     {service.title}
                   </span>
-                  <span className="text-base font-normal text-gray-300">
+                  <span className="text-sm md:text-base font-normal text-gray-300">
                     {service.description}
                   </span>
                 </div>

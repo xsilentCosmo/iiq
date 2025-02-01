@@ -8,7 +8,7 @@ function ConsultingServices() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Headline */}
           <div className="text-center md:text-left">
-            <h2 className="text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Explore Our Expert <br/><span className="text-[#91e0ed]">Consulting Services</span>
             </h2>
             

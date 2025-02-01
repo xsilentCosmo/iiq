@@ -8,9 +8,9 @@ const Hero = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-16">
         {/* Right Column - Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-            Empower Your Success with <span className="text-[#91e0ed]">Integral IQ</span>
-            <span className="text-3xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+            Empower Your <br/> Success with <br/><span className="text-[#91e0ed]">Integral IQ</span>
+            <span className="text-3xl md:text-4xl lg:text-5xl">
               <Typewriter
                 words={[' Incubator', " LMS"]}
                 loop={true}
@@ -28,14 +28,14 @@ const Hero = () => {
 
           </h2> */}
 
-          <p className="text-lg lg:text-xl mb-8">
+          <p className="md:text-lg lg:text-xl mb-8">
             We incubate innovative startups and help them scale with advanced technology, mentorship, and a thriving community.
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="px-8 py-4 bg-[#91e0ed] text-[#00375e] hover:bg-[#d8f2f7] hover:scale-110 rounded-full text-lg font-semibold transition">
+            <button className="px-8 py-4 bg-[#91e0ed] text-[#00375e] hover:bg-[#d8f2f7] hover:scale-110 rounded-full md:text-lg font-semibold transition">
               Get Started
             </button>
-            <button className="ml-4 px-8 py-4 bg-white text-[#00375e] hover:bg-[#d9f7fb] hover:translate-x-5 rounded-full text-lg font-semibold transition">
+            <button className="ml-4 px-8 py-4 bg-white text-[#00375e] hover:bg-[#d9f7fb] hover:translate-x-5 rounded-full md:text-lg font-semibold transition">
               Learn More
             </button>
           </div>
@@ -50,7 +50,7 @@ const Hero = () => {
           <img
             src="/hero.png"
             alt="Hero Animation"
-            className="w-4/5 md:w-full max-w-lg"
+            className="w-full sm:w-full md:w-full max-w-lg"
           />
 
         </motion.div>

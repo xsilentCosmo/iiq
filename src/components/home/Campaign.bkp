@@ -1,0 +1,74 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import Image from 'next/image';
+
+export default function CampaignSection() {
+    const campaigns = [
+        { id: 1, src: '/images/ads/Ad 001.jpeg', alt: 'Campaign 1' },
+        { id: 2, src: '/images/ads/Ad 002.png', alt: 'Campaign 2' },
+        { id: 3, src: '/images/ads/Ad 003.jpeg', alt: 'Campaign 3' },
+        { id: 4, src: '/images/ads/Ad 004.jpeg', alt: 'Campaign 4' },
+        { id: 5, src: '/images/ads/Ad 005.png', alt: 'Campaign 5' },
+        { id: 6, src: '/images/ads/Ad 006.jpeg', alt: 'Campaign 6' },
+        { id: 7, src: '/images/ads/Ad 007.jpg', alt: 'Campaign 7' },
+        { id: 8, src: '/images/ads/Ad 008.jpeg', alt: 'Campaign 8' },
+        { id: 9, src: '/images/ads/Ad 009.jpg', alt: 'Campaign 9' },
+        { id: 10, src: '/images/ads/Ad 010.png', alt: 'Campaign 10' },
+        { id: 11, src: '/images/ads/Ad 011.png', alt: 'Campaign 11' },
+        { id: 12, src: '/images/ads/Ad 012.jpg', alt: 'Campaign 12' },
+        { id: 13, src: '/images/ads/Ad 013.png', alt: 'Campaign 13' },
+        { id: 14, src: '/images/ads/Ad 014.png', alt: 'Campaign 14' },
+        { id: 15, src: '/images/ads/Ad 015.png', alt: 'Campaign 15' },
+        { id: 16, src: '/images/ads/Ad 016.png', alt: 'Campaign 16' },
+        { id: 17, src: '/images/ads/Ad 017.jpg', alt: 'Campaign 17' },
+    ];
+
+    const scrollContainerRef = useRef(null);
+
+    useEffect(() => {
+        const scrollContainer = scrollContainerRef.current;
+        let scrollPosition = 0;
+        const scrollSpeed = 1; // Adjust speed here
+        const scrollWidth = scrollContainer.scrollWidth;
+
+        const scroll = () => {
+            scrollPosition += scrollSpeed;
+            if (scrollPosition >= scrollWidth) {
+                scrollPosition = 0; // Reset position when the end is reached
+            }
+            scrollContainer.scrollLeft = scrollPosition;
+        };
+
+        const intervalId = setInterval(scroll, 20); // Adjust the interval time here for smoother/slower scrolling
+
+        return () => clearInterval(intervalId); // Cleanup on unmount
+    }, []);
+
+    return (
+        <section className="bg-gradient-to-br from-[#1b2a36] to-[#00375e] py-16 px-4">
+            <div className="max-w-screen-xl mx-auto text-center text-white mb-8">
+                <h2 className="text-3xl font-bold mb-4">Our Latest Campaigns</h2>
+                <p className="text-lg text-gray-300 mb-6">Explore our ongoing campaigns below.</p>
+
+                {/* Horizontal Scroll Container */}
+                <div
+                    ref={scrollContainerRef}
+                    className="relative overflow-hidden flex space-x-6 items-center"
+                >
+                    {campaigns.map((campaign) => (
+                        <div key={campaign.id} className="flex-shrink-0">
+                            <Image
+                                src={campaign.src}
+                                alt={campaign.alt}
+                                width={500} // Customize the width
+                                height={300} // Customize the height
+                                className="object-fill rounded-lg max-h-[calc(90vh-3rem)]" // Adjust max height here (100vh-3rem accounts for padding/margin)
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
