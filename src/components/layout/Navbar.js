@@ -11,11 +11,11 @@ function Navbar() {
   return (
     <div>
       <header className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md">
-        <div className="max-w-screen-xl mx-auto px-6 py-1 flex items-center justify-between">
+        <div className="max-w-screen-xl md:max-w-[90%] mx-auto px-6 py-1 md:py-2 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <Link href="/">
-              <Image src="/logo.png" width={180} height={50} alt="logo" />
+              <Image src="/logo.png" width={180} height={50} alt="logo" className='xl:w-52' />
             </Link>
           </div>
 
@@ -25,7 +25,7 @@ function Navbar() {
               <Link
                 key={index}
                 href={`${item === 'Home' ? '/' : item.toLowerCase()}`}
-                className="text-gray-100 hover:text-[#91e0ed] font-medium transition"
+                className="text-gray-100 hover:text-[#91e0ed] font-medium xl:text-lg transition"
               >
                 {item}
               </Link>
@@ -39,7 +39,7 @@ function Navbar() {
             >
               <Link
                 href="#"
-                className="text-gray-100 hover:text-[#91e0ed] font-medium transition"
+                className="text-gray-100 hover:text-[#91e0ed] font-medium xl:text-lg transition"
               >
                 Training
               </Link>
@@ -65,7 +65,7 @@ function Navbar() {
               <Link
                 key={index}
                 href={`${item === 'Home' ? '/' : '/' + item.toLowerCase()}`}
-                className="text-gray-100 hover:text-[#91e0ed] font-medium transition"
+                className="text-gray-100 hover:text-[#91e0ed] font-medium xl:text-lg transition"
               >
                 {item}
               </Link>

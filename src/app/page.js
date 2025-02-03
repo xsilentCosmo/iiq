@@ -33,17 +33,17 @@ export default function Home() {
     <div>
       <Hero />
       <WhyChooseUs />
-      <CampaignSection />
       <Portfolio />
       <WhatWeOffer />
       <VisionMission />
 
       {isMobile ? <ServicesMobile /> : <ServicesSection />}
 
+      <CampaignSection />
       <ConsultingServices />
       <CTASection />
       <Gallery />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

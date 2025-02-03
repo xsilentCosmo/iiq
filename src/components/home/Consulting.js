@@ -2,7 +2,8 @@ import React from 'react';
 
 function ConsultingServices() {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white">
+    <section className="py-20 bg-gradient-to-tr from-[#1b2a36] to-[#00375e]  text-white">
+      <div className='border-t-2 border-cyan-600 py-5 pb-8 max-w-[80%] mx-auto'></div>
       <div className="max-w-screen-xl mx-auto px-5">
         {/* Headline and Description Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

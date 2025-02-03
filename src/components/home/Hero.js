@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-br from-[#00375e] to-[#91e0ed] text-white py-16 min-h-screen flex items-center">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-16">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-12">
         {/* Right Column - Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
@@ -50,7 +50,7 @@ const Hero = () => {
           <img
             src="/hero.png"
             alt="Hero Animation"
-            className="w-full sm:w-full md:w-full max-w-lg"
+            className="w-full sm:w-full md:w-full lg:max-w-full max-w-lg"
           />
 
         </motion.div>
