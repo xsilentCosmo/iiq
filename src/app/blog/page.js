@@ -20,7 +20,7 @@ function BlogPage() {
             <div className="max-w-screen-xl mx-auto px-6">
                 {/* Section Heading */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold mb-4">Our Latest Blog Posts</h1>
+                    <h1 className="text-4xl font-bold mb-4">Latest Blog Posts</h1>
                     <p className="text-lg text-gray-300">
                         Stay updated with the latest insights, trends, and stories from our industry.
                     </p>

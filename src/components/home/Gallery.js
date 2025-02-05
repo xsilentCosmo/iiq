@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 function Gallery() {
     return (
         <section className="pt-20 bg-gradient-to-br from-[#1b2a36] to-[#00375e] text-white bg-green-500">
             <div className="max-w-screen mx-auto px-0">
                 {/* Section Heading */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-semibold text-white mb-4">Our Work in Focus</h2>
+                    <h2 className="text-4xl font-semibold text-white mb-4">Work in Focus</h2>
                     <p className="text-lg text-gray-200">
                         Take a glimpse at some of our featured highlights and achievements.
                     </p>
@@ -65,12 +67,12 @@ function Gallery() {
                         <p className="text-lg text-gray-300 mb-6">
                             Discover more of what we’ve accomplished through our creative projects.
                         </p>
-                        <a
-                            href="/gallery"
+                        <Link
+                            href="/"
                             className="inline-block px-6 py-3 bg-[#91e0ed] text-[#1b2a36] font-semibold rounded-lg shadow-md hover:bg-[#6dc2d6] transition-all"
                         >
                             View Gallery
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

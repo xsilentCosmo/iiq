@@ -30,7 +30,7 @@ export default function CampaignSection() {
   return (
     <section className="bg-gradient-to-br from-[#1b2a36] to-[#00375e] py-16 px-4">
       <div className="max-w-screen-xl mx-auto text-center text-white mb-8">
-        <h2 className="text-3xl font-bold mb-4">Our Latest <span className="text-[#91e0ed]">Campaigns</span></h2>
+        <h2 className="text-3xl font-bold mb-4">Ongoing <span className="text-[#91e0ed]">Campaigns</span></h2>
         <p className="md:text-lg text-gray-300 mb-6">Explore our ongoing campaigns below.</p>
 
         {/* Swiper Carousel */}
@@ -86,7 +86,7 @@ export default function CampaignSection() {
       {/* View All Campaigns Button */}
       <div className="mt-8 text-center">
         <Link
-          href="/campaigns"
+          href="/"
           className="px-4 py-3 bg-gradient-to-r from-[#6dc2d6] to-[#91e0ed] text-[#1b2a36] font-semibold rounded-lg shadow hover:from-[#91e0ed] hover:to-[#6dc2d6] transition-all"
         >
           View All Campaigns

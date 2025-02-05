@@ -12,12 +12,12 @@ const WhyChooseUs = () => {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.3 }}>
-                    Why Choose <span className="text-[#91e0ed]">Integral IQ?</span>
+                    Why <span className="text-[#91e0ed]">integral iQ?</span>
                 </motion.h2>
                 <motion.p className="text-base text-gray-200 mb-16"
                     initial={{ y: 50 }}
                     whileInView={{ y: 0 }}>
-                    At Integral IQ, we provide an all-in-one ecosystem for startups, offering guidance, resources, and opportunities to thrive.
+                     We provide an all-in-one ecosystem for startups, offering guidance, resources, and opportunities to thrive.
                 </motion.p>
                 <div className="grid md:grid-cols-3 gap-12">
 

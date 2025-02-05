@@ -46,7 +46,7 @@ function Portfolio() {
                     initial={{scale:0}}
                     whileInView={{scale:1}}
                     transition={{duration:0.3}}
-                     className="text-3xl font-semibold mb-3">Our<span className="text-[#91e0ed]"> Incubated</span> Ventures</motion.h2>
+                     className="text-3xl font-semibold mb-3"><span className="text-[#91e0ed]"> Current</span> Ventures</motion.h2>
                     <motion.p
                     initial={{y:50}}
                     whileInView={{y:0}}

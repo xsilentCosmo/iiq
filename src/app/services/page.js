@@ -8,16 +8,16 @@ import { FiCode, FiTrendingUp, FiSettings, FiMonitor, FiShoppingCart, FiLayers, 
 const services = [
     { id: "research-development", company: "QuibitQ Labs", title: "Research & Development", description: "Innovative research solutions.", icon: <FiTrendingUp /> },
     { id: "development", company: "Quantum Quotient", title: "Development", description: "Expert software solutions.", icon: <FiCode /> },
-    { id: "automation", company: "IIQ Digital", title: "Automation", description: "AI-driven automation services.", icon: <FiSettings /> },
-    { id: "advertising", company: "Pavan Media Tech", title: "Advertising", description: "Creative marketing strategies.", icon: <FiMonitor /> },
-    { id: "sales", company: "SalesBoost", title: "Sales", description: "Revenue-boosting sales solutions.", icon: <FiShoppingCart /> },
-    { id: "infrastructure", company: "IIQ Space", title: "Infrastructure", description: "Premium co-working spaces.", icon: <FiLayers /> },
+    { id: "automation", company: "iiQ Digital", title: "Automation", description: "AI-driven automation services.", icon: <FiSettings /> },
+    { id: "Branding", company: "Pavan Media Tech", title: "Advertising", description: "Creative marketing strategies.", icon: <FiMonitor /> },
+    { id: "sales", company: "Sales Institute", title: "Sales", description: "Revenue-boosting sales solutions.", icon: <FiShoppingCart /> },
+    { id: "infrastructure", company: "iiQ Space", title: "Infrastructure", description: "Premium co-working spaces.", icon: <FiLayers /> },
     { id: "franchise", company: "FranchisePro", title: "Franchise", description: "Expand your brand with us.", icon: <FiBriefcase /> },
-    { id: "marketing", company: "Quantum Leads", title: "Marketing", description: "Data-driven brand transformation.", icon: <FiTarget /> },
+    { id: "marketing", company: "QuantumLeads", title: "Marketing", description: "Data-driven brand transformation.", icon: <FiTarget /> },
     { id: "project-management", company: "Project Mate", title: "Project Management", description: "Efficient & reliable execution.", icon: <FiClipboard /> },
     { id: "quality-management", company: "QualiDezk", title: "Quality Management", description: "Ensuring excellence in quality.", icon: <FiCheckCircle /> },
-    { id: "consultancy", company: "PacketLab", title: "Consultancy", description: "Expert business advisory.", icon: <FiUserCheck /> },
-    { id: "finance", company: "FinGrowth", title: "Finance", description: "Smart financial strategies.", icon: <FiDollarSign /> },
+    { id: "Networking", company: "PacketLab", title: "Networking", description: "Expert business advisory.", icon: <FiUserCheck /> },
+    { id: "finance", company: "GMAcc", title: "Finance", description: "Smart financial strategies.", icon: <FiDollarSign /> },
 ];
 
 const Services = () => {
